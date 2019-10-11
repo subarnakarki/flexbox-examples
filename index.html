@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flexbox Examples</title>
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Flexbox Examples</h1>
+    <div class="parent align-baseline flex-column">
+      <div class="child ">1</div>
+      <div class="child ">2</div>
+      <div class="child ">3</div>
+      <div class="child ">4</div>
+      <div class="child ">5</div>
+    </div>
+  </main>
+  <div class="row">
+    <div class="column flex-direction">
+      <h2>flex-direction:</h2>
+      <button class="active-button">column</button>
+      <button>row</button>
+    </div>
+    <div class="column justify-content">
+      <h2>justify-content:</h2>
+      <button class="active-button">flex-start</button>
+      <button>center</button>
+      <button>flex-end</button>
+      <button>space-around</button>
+      <button>space-between</button>
+    </div>
+    <div class="column align-items">
+      <h2>align-items:</h2>
+      <button>flex-start</button>
+      <button>center</button>
+      <button>flex-end</button>
+      <button>stretch</button>
+      <button class="active-button">baseline</button>
+    </div>
+    <div class="column flex-wrap">
+      <h2>flex-wrap:</h2>
+      <button>nowrap</button>
+      <button >wrap</button>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
