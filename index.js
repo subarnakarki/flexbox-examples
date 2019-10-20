@@ -1,23 +1,17 @@
+// Buttons in each row
 const flexDirectionButtons = document.querySelectorAll('.flex-direction > button');
 const justifyContentButtons = document.querySelectorAll('.justify-content > button');
 const alignItemButtons = document.querySelectorAll('.align-items > button');
 const flexWrapButtons = document.querySelectorAll('.flex-wrap > button');
+
 const boxes = document.querySelectorAll('.child');
 const parentContainer = document.querySelector('.parent');
 
-const applyStyles = (button, style, buttonColumn) => {
+const applyStyles = (button, attribute, buttonColumn) => {
     button.addEventListener('click', () => {
-        parentContainer.style[style] = button.textContent;
-        if (style === 'flex-wrap') {
-            if (button.textContent === 'wrap') {
-                boxes.forEach((box) => {
-                    box.classList.add('wrap');
-                });
-            } else {
-                boxes.forEach((box) => {
-                    box.classList.remove('wrap');
-                });
-            }
+        parentContainer.style[attribute] = button.textContent;
+        if (attribute === 'flex-wrap') {
+            button.textContent === 'wrap' ? boxes.forEach((box) =>  box.classList.add('wrap')) : boxes.forEach((box) =>  box.classList.remove('wrap'));
         }
         updateButtons(buttonColumn, button);
     });
